@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
-import { PreloadSelectedModules } from './app.custom-preload-strategy';
+import { CustomModuleLoading } from './app.custom-preload-strategy';
 
 
 /*
@@ -25,7 +25,7 @@ import { XLarge } from './home/x-large';
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
   AppState,
-  PreloadSelectedModules
+  CustomModuleLoading
 ];
 
 type StoreType = {
@@ -50,7 +50,7 @@ type StoreType = {
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadSelectedModules })
+    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: CustomModuleLoading })
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,

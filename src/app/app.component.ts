@@ -30,8 +30,14 @@ import { AppState } from './app.service';
       </span>
       |
       <span>
-        <a [routerLink]=" ['./detail'] ">
-          Detail
+        <a [routerLink]=" ['./customLazy'] ">
+          Custom Lazy
+        </a>
+      </span>
+      |
+      <span>
+        <a [routerLink]=" ['./lazy'] ">
+          Lazy
         </a>
       </span>
       |

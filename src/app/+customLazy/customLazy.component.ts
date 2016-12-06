@@ -5,16 +5,16 @@ import { Component } from '@angular/core';
  * see https://github.com/gdi2290/es6-promise-loader for more info
  */
 
-console.log('`Detail` component loaded asynchronously');
+console.log('`Lazy Load Component` component loaded asynchronously');
 
 @Component({
-  selector: 'detail',
+  selector: 'custom-lazy',
   template: `
-    <h1>Hello from Detail</h1>
+    <h1>Hello from Custom Lazy Component :)</h1>
     <router-outlet></router-outlet>
   `
 })
-export class DetailComponent {
+export class CustomLazyComponent {
   constructor() {
 
   }
